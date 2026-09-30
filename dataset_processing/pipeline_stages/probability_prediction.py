@@ -1,7 +1,7 @@
 import pandas as pd
 import time
-from dataset_processing.hmm_pipeline.hmm_data_processing import compute_features
-from dataset_processing.hmm_pipeline.hmm_data_processing import build_name_to_feature_dict
+from dataset_processing.pipeline_stages.pairwise_feature_generation import compute_features
+from dataset_processing.pipeline_stages.pairwise_feature_generation import build_name_to_feature_dict
 
 
 def predict_probabilities(

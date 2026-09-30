@@ -7,18 +7,18 @@ import gc
 
 import pandas as pd
 
-from dataset_processing.hmm_pipeline.ground_truth_extraction import build_pairs_dataset
-from dataset_processing.hmm_pipeline.novelty_fit import (
+from dataset_processing.pipeline_stages.ground_truth_extraction import build_pairs_dataset
+from dataset_processing.pipeline_stages.novelty_fit import (
     DEFAULT_FPR_BUDGETS,
     PRIMARY_FPR_BUDGET,
     REPORTED_FPR_BUDGETS,
     fit_novelty_threshold,
 )
-from dataset_processing.hmm_pipeline.probability_model_calibration import calibrate_model
-from dataset_processing.hmm_pipeline.probability_model_training import train_probability_model
-from dataset_processing.hmm_pipeline.probability_prediction import predict_probabilities
-from dataset_processing.hmm_pipeline.taxon_assignment import aggregate_and_summarize
-from dataset_processing.hmm_pipeline.taxon_assignment_evaluation import evaluate_assignment_results
+from dataset_processing.pipeline_stages.probability_model_calibration import calibrate_model
+from dataset_processing.pipeline_stages.probability_model_training import train_probability_model
+from dataset_processing.pipeline_stages.probability_prediction import predict_probabilities
+from dataset_processing.pipeline_stages.taxon_assignment import aggregate_and_summarize
+from dataset_processing.pipeline_stages.taxon_assignment_evaluation import evaluate_assignment_results
 from dataset_processing.train_test_split import load_dataset_split
 from dataset_processing.util import (
     load_scenario_pickle,

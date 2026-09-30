@@ -3,9 +3,9 @@ from sklearn.calibration import CalibratedClassifierCV
 from sklearn.frozen import FrozenEstimator
 from sklearn.metrics import log_loss, brier_score_loss
 
-from dataset_processing.hmm_pipeline.hmm_data_processing import compute_features
-from dataset_processing.hmm_pipeline.hmm_data_processing import build_name_to_feature_dict
-from dataset_processing.hmm_pipeline.probability_model_training import _describe_probs
+from dataset_processing.pipeline_stages.pairwise_feature_generation import compute_features
+from dataset_processing.pipeline_stages.pairwise_feature_generation import build_name_to_feature_dict
+from dataset_processing.pipeline_stages.probability_model_training import _describe_probs
 
 
 def calibrate_model(

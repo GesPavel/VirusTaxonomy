@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-from dataset_processing.hmm_pipeline.hmm_data_processing import _build_hit_matrix
+from dataset_processing.pipeline_stages.pairwise_feature_generation import _build_hit_matrix
 
 
 # Query genomes per similarity block. The block holds one dense

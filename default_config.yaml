@@ -3,13 +3,19 @@ experiment:
   parent_experiment_name:
   description: "Default settings: sigmoid calibration, best-hit aggregation, 15% FPR budget"
   random_seed: 42
-  output_root: "G:/experiments"     # where experiment dirs are written
+  # Relative to the directory you run from, i.e. the project root. One
+  # subdirectory is created per run.
+  output_root: "experiments"
 
 data:
-  data_root: "G:/output_root"       # path to all datasets
-  chosen_scenario: 2                # 1 | 2 | 3 | 4 | all
+  # Relative to the project root. Expected layout:
+  #   data/<taxon_rank>/scenario<chosen_scenario>/pkl_ext/train.pkl
+  #                                              /pkl_ext/test.pkl
+  # The rank and scenario below must match the folders actually present.
+  data_root: "data"
+  chosen_scenario: 4                # 1 | 2 | 3 | 4 | all
   representation: "hmm"        # hmm | pc | hybrid
-  taxon_rank: "Family"         # Family | Genus | Order | ...
+  taxon_rank: "Order"          # Family | Genus | Order | ...
 
 split:
   calibration_fraction: 0.15
